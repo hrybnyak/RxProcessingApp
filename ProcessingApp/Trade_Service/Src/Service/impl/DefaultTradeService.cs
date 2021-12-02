@@ -49,8 +49,9 @@ namespace ProcessingApp.Trade_Service.Src.Service.impl
         private IObservable<MessageDTO<MessageTrade>> FilterAndMapTradingEvents(
             IObservable<Dictionary<string, object>> input)
         {
-            // TODO: Add implementation to produce trading events
-            return Observable.Never<MessageDTO<MessageTrade>>();
+            // DONE: Add implementation to produce trading events
+            return input.Where(v => MessageMapper.IsTradeMessageType(v))
+                .Select(v => MessageMapper.MapToTradeMessage(v));
         }
 
         private IObservable<Trade> MapToDomainTrade(IObservable<MessageDTO<MessageTrade>> input)

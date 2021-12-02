@@ -31,7 +31,7 @@ namespace ProcessingApp.Price_Service.Src.Service.Impl
             return SharedStream.Merge(AveragePrice(intervalPreferencesStream, SharedStream));
         }
 
-        // FIXME:
+        // FIXME-DONE:
         // 1) JUST FOR WARM UP: .map() incoming Dictionary<string, object> to MessageDTO. For that purpose use MessageDTO.price()
         //    NOTE: Incoming Dictionary<string, object> contains keys PRICE_KEY and CURRENCY_KEY
         //    NOTE: Use MessageMapper utility class for message validation and transformation
@@ -39,19 +39,17 @@ namespace ProcessingApp.Price_Service.Src.Service.Impl
         private static IObservable<Dictionary<string, object>> SelectOnlyPriceUpdateEvents(
             IObservable<Dictionary<string, object>> input)
         {
-            // TODO: filter only Price messages
-            // TODO: verify that price message are valid
+            // DONE: filter only Price messages
+            // DONE: verify that price message are valid
             // HINT: Use MessageMapper methods to perform filtering and validation
 
-            return Observable.Never<Dictionary<string, object>>();
+            return input.Where(d => MessageMapper.IsPriceMessageType(d) && MessageMapper.IsValidPriceMessage(d));
         }
 
         // Visible for testing
         private static IObservable<MessageDTO<float>> CurrentPrice(IObservable<Dictionary<string, object>> input)
         {
-            // TODO map to Statistic message using MessageMapper.mapToPriceMessage
-
-            return Observable.Never<MessageDTO<float>>();
+            return input.Select(v => MessageMapper.MapToPriceMessage(v));
         }
 
         // 1.1)   TODO Collect crypto currency price during the interval of seconds

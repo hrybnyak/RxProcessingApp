@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\y.s.hrybniak\\Documents\\School\\RxProcessingApp\\ProcessingApp\\ProcessingApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\y.s.hrybniak\\Documents\\School\\RxProcessingApp\\ProcessingApp\\ProcessingApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\y.s.hrybniak\\Documents\\School\\RxProcessingApp\\ProcessingApp\\ProcessingApp.csproj",
+        "projectName": "ProcessingApp",
+        "projectPath": "C:\\Users\\y.s.hrybniak\\Documents\\School\\RxProcessingApp\\ProcessingApp\\ProcessingApp.csproj",
+        "packagesPath": "C:\\Users\\y.s.hrybniak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\y.s.hrybniak\\Documents\\School\\RxProcessingApp\\ProcessingApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\y.s.hrybniak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/drbsystemsllc/_packaging/Tooling/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "H.Socket.IO": {
+              "target": "Package",
+              "version": "[1.0.4.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.11.4, )"
+            },
+            "MongoDB.Driver.GridFS": {
+              "target": "Package",
+              "version": "[2.11.4, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "System.Reactive.Core": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "System.Reactive.Linq": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
